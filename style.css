@@ -1,9 +1,5 @@
-:root {
-    --twitter: $twitter-or-white: dark-light-choose(unquote("#000"), unquote("#fff"));
-   }
-
 body {
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     color: #333;
     margin: 0;
     padding: 0;
@@ -17,10 +13,13 @@ body {
 
 .container {
     text-align: center;
+    padding: 0 20px; 
 }
 
 h1 {
-    margin-bottom: 30px;
+    margin-bottom: 20px; 
+    font-size: 2em; 
+    line-height: 1.2; 
 }
 
 .grid {
@@ -70,16 +69,16 @@ h1 {
 }
 
 .toggle-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: fixed; 
+    top: 10px; 
+    right: 10px; 
+    z-index: 1; 
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .grid {
-        grid-template-columns: repeat(3, 1fr); /* 2 items per row */
-        gap: 15px;
+        grid-template-columns: repeat(4, 1fr); 
     }
     .grid i, .grid img {
         font-size: 30px;
@@ -89,13 +88,23 @@ h1 {
 }
 
 @media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; 
+        margin-bottom: 20px; 
+    }
+
     .grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
-        gap: 10px;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 15px; 
     }
     .grid i, .grid img {
         font-size: 25px;
         width: 25px;
         height: 25px;
+    }
+
+    .toggle-container {
+        top: 5px; 
+        right: 5px; 
     }
 }
