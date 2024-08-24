@@ -1,0 +1,101 @@
+:root {
+    --twitter: $twitter-or-white: dark-light-choose(unquote("#000"), unquote("#fff"));
+   }
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Edu VIC WA NT Beginner';
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgb(136, 136, 136);
+    transition: transform 0.3s;
+}
+
+.grid a:hover {
+    transform: translateY(-5px);
+}
+
+.grid i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.grid img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.dark-mode .grid a {
+    background-color: #393938;
+    box-shadow: 0 2px 5px rgb(42, 42, 42);
+}
+
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* 2 items per row */
+        gap: 15px;
+    }
+    .grid i, .grid img {
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        gap: 10px;
+    }
+    .grid i, .grid img {
+        font-size: 25px;
+        width: 25px;
+        height: 25px;
+    }
+}
