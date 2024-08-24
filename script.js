@@ -12,3 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
         api.replaceIcon('fab-twitter', 'temporary-twitter-x');
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Simulate a loading process
+    setTimeout(function() {
+        document.getElementById('loading-screen').style.display = 'none';
+        document.querySelector('.content').style.display = 'block';
+    }, 3000); // 3 seconds loading time
+});
